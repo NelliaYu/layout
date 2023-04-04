@@ -1,0 +1,179 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   height: 100%;
+   background: linear-gradient(rgb(48, 48, 143), black) no-repeat;
+   font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.container {
+   width: 1000px;
+   margin: 80px auto 100px;
+   /* background-color: #fff; */
+
+   text-align: center;
+   color: #fff;
+
+   /* 커서 안되게 막기 -> 해당 클래스 안에 마우스 효과로 들어가 있는  */
+   /* pointer-events: none; */
+}
+
+/* 상단글자영역 */
+.container .head-container {
+   height: 80px;
+   color: #fff;
+   text-align: center;
+   margin-bottom: 130px;
+}
+
+.container .head-container .date {
+   background-color: green;
+   font-weight: bold;
+   font-size: 20px;
+   letter-spacing: 2px;
+   border-radius: 15px;
+   display: inline-block;
+   padding: 5px 20px;
+
+   margin-bottom: 30px;
+}
+
+.container .head-container p {
+   font-size: 65px;
+   font-family: "Black Han Sans", sans-serif;
+}
+
+.container .head-container p span {
+   color: gold;
+   position: relative;
+}
+
+.container .head-container p span::after {
+   content: "";
+   width: 65px;
+   height: 65px;
+   border-radius: 50%;
+   background-color: #ff0000;
+   position: absolute;
+   top: -25px;
+   left: -10px;
+   z-index: -1;
+}
+
+/* 그림영역 */
+.container .pic-container {
+   /* background-color: pink; */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   gap: 40px 30px;
+
+   margin-bottom: 70px;
+}
+
+.pic-container .items {
+   border-radius: 10px;
+   background-color: #172036;
+   /* width: 300px; */
+   /* height: 430px; */
+   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+
+   text-align: center;
+}
+
+.pic-container .items img {
+   height: 350px;
+   border-radius: 10px;
+   filter: grayscale(100%);
+}
+
+.pic-container .items img:hover {
+   filter: grayscale(0%);
+   transition: all 0.5s;
+}
+
+.pic-container .items .info {
+   padding: 15px 0px;
+   font-weight: bold;
+}
+
+.pic-container .items .info p {
+   color: #fff;
+   font-size: 16px;
+}
+
+.pic-container .items .info .percentage {
+   color: rgb(113, 214, 113);
+   font-size: 20px;
+   font-weight: bold;
+   /* text-align: left; */
+
+   margin-top: 4px;
+}
+
+/* 하단영역 */
+.container .txt-details {
+   height: 100px;
+   margin-bottom: 200px;
+}
+
+.container .txt-details h1 {
+   margin-bottom: 40px;
+}
+
+.txt-details button {
+   /* height: 40px; */
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   color: white;
+
+   position: relative;
+   border: none;
+   display: inline-block;
+   padding: 20px 30px;
+   border-radius: 15px;
+   box-shadow: 0 10px 35px rgba(238, 218, 218, 0.5);
+   text-decoration: none;
+   font-weight: 600;
+   transition: 0.25s;
+}
+
+.txt-details button:hover {
+   letter-spacing: 2px;
+   transform: scale(1.2);
+   cursor: pointer;
+   color: black;
+}
+
+.txt-details button:active {
+   transform: scale(1.5);
+}
+
+.txt-details button.btn-gra-anim {
+   background-size: 400% 400%;
+   animation: gradient1 8s ease infinite;
+}
+
+@keyframes gradient1 {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+.container > img {
+   width: 60px;
+   height: 60px;
+   filter: opacity(0.5) drop-shadow(0 0 0 rgb(7, 253, 32));
+   border-radius: 50%;
+   padding: 5px 0 5px 5px;
+}

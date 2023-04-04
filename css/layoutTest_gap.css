@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container {
+    width: 200px;
+    height: 300px;
+    background-color: palevioletred;
+    border: 3px solid purple;
+    border-radius: 5px;
+
+    padding: 50px 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap: nowrap; 줄바꿈x */
+
+    gap: 10px 5px;
+
+}
+
+.container input {
+    width: 100%;
+    height: 35px;
+    text-align: right;
+    outline: none;
+    border: 2px solid rebeccapurple;
+    background-color: rgba(250, 250, 250, 0.4);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    /* -moz-appearance: textfield; */
+    padding: 5px;
+}
+
+.items {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+    background-color: rgba(250, 250, 250, 0.6);
+
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    /* 글자부모의 height를 line-height로 맞춰야 */
+    line-height: 50px;
+}
+
+
+.items:hover {
+    border-color: #fff;
+    font-size: 1.5em;
+}

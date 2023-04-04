@@ -1,0 +1,94 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container {
+   /* background: url("img/newYork.jpg") no-repeat center; */
+   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("img/bg_newYork.jpg") no-repeat center;
+   /* background-color: rgba(0,0,0, .5); */
+   /* width: 100%; */
+   height: 100vh;
+   background-size: cover;
+}
+
+.container .header {
+   width: 80%;
+   height: 80px;
+   margin: 0 auto;
+   /* background-color: rgba(255,192,203,0.2); */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.container .header h1 a {
+   text-decoration: none;
+   color: white;
+   /* 폰트 부분 적용 */
+   font-family: "Orbitron", sans-serif;
+}
+
+/* 왜 header 클래스는 적지 않았는가? */
+.container .nav ul li {
+   display: inline-flex;
+   margin: 0 10px;
+   position: relative;
+   font-family: 'Kanit', sans-serif;
+}
+
+.container .nav ul li a {
+   color: white;
+   text-decoration: none;
+}
+
+.container .nav ul li a:hover::after {
+   content: "♥";
+   color: rgba(225, 212, 33, 0.5);
+   font-size: 50px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   /* scale: 2; */
+}
+
+.container .hero {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   /* 위의 3개의 설정은 해당 영역이 항상 화면의 가운데로 오게 함 */
+   text-align: center;
+   /* background-color: rgba(160,200,20,0.2); */
+   color: white;
+   font-family: "Orbitron", sans-serif;
+}
+
+.container .hero h2 {
+   font-size: 60px;
+   margin-bottom: 20px;
+}
+
+.container .hero p {
+   font-size: 22px;
+}
+
+.container .hero button {
+   background: none;
+   border: 2px solid darkkhaki;
+   color: white;
+   font-weight: bold;
+   padding: 15px 20px;
+   border-radius: 20px;
+   margin-top: 30px;
+   outline: none;
+   cursor: pointer;
+   transition: all 0.8s;
+}
+
+.container .hero button:hover {
+   background-color: darkkhaki;
+   color: black;
+}

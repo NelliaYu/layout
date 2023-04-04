@@ -1,0 +1,206 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+}
+
+/* header */
+header {
+   height: 60px;
+   padding: 0 30px;
+   /* font-family: "Shadows Into Light", cursive; */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   /* gap: 10px; */
+   box-shadow: 0px 0px 5px 0px rgba(78, 77, 77, 0.4);
+
+   font-family: "Fredoka One", cursive;
+}
+
+header img {
+   width: 50px;
+   height: 50px;
+}
+
+
+header h1 sup {
+   font-size: 5px;
+}
+
+/* error */
+header h1:hover:not(sup) {
+   text-shadow: 0px 0px 15px rgba(7, 62, 227, 0.6);
+}
+
+header ul {
+   width: 350px;
+   display: flex;
+   justify-content: space-between;
+   /* background-color: rgba(7, 62, 227, 0.3); */
+   /* color: #fff; */
+   padding: 5px;
+   border-radius: 5px;
+}
+
+header ul li {
+   list-style: none;
+   position: relative;
+   font-weight: bold;
+}
+
+header ul li:hover::after,
+header ul li:active::after,
+header ul li:focus::after {
+   content: "";
+   width: 100%;
+   height: 3px;
+   background-color: #2b4ed9;
+   position: absolute;
+   left: 0;
+   bottom: -23px;
+}
+
+/* content */
+#content-wrap {
+   flex: 1;
+
+   height: auto;
+   min-height: 100%;
+
+   padding: 30px;
+}
+
+#content-wrap .info {
+   padding: 10px 0;
+   /* background-color: rgba(78, 77, 77, 0.4); */
+   font-size: 15px;
+   text-align: justify;
+   line-height: 1.8;
+
+   position: relative;
+}
+
+#content-wrap .info h2 {
+   padding-left: 10px;
+   margin-bottom: 20px;
+}
+
+#content-wrap .info h2::before {
+   content: "";
+   width: 4px;
+   height: 28px;
+   background-color: #2b4ed9;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transform: translateY(60%);
+}
+
+#content-wrap .product-info {
+   height: auto;
+   padding: 40px;
+   display: flex;
+   gap: 20px;
+}
+
+.product-info .items {
+   font-size: 18px;
+   text-align: center;
+   line-height: 1.4;
+   padding: 20px;
+   border-radius: 15px;
+}
+
+.product-info .items:hover {
+   background-color: rgba(7, 62, 227, 0.2);
+   transition: all 0.9s;
+}
+
+/* 전체적인 블럭색상 변경 */
+::selection {
+   background-color: black;
+   color: #fff;
+}
+
+/* error */
+.product-info .items p::selection {
+   background-color: black;
+   color: #fff;
+}
+
+.product-info .items img {
+   width: 70px;
+   height: 70px;
+   display: block;
+   margin: 0px auto;
+   padding: 10px;
+   background-color: white;
+   border-radius: 50%;
+   margin-bottom: 10px;
+}
+
+.product-info .items div {
+   margin-bottom: 10px;
+   font-family: "Fredoka One", cursive;
+}
+
+.product-info .items div span {
+   color: #2b4ed9;
+}
+
+.product-info .items p {
+   font-family: "Tiro Devanagari Hindi", serif;
+}
+
+/* error */
+.product-info .items p strong {
+   text-align: left;
+}
+
+.product-info .items button {
+   margin-top: 20px;
+   width: 80px;
+   padding: 5px 10px;
+   border: 2px solid rgba(7, 62, 227, 0.6);
+   border-radius: 13px;
+   font-size: 20px;
+   color: #2b4ed9;
+   background-color: #fff;
+   font-family: "Fredoka One", cursive;
+}
+
+.product-info .items button:hover {
+   background-color: rgba(7, 62, 227, 0.6);
+   color: #ffffff;
+}
+
+/* error */
+/* footer */
+footer {
+   height: 60px;
+   border-top: 1px solid #214475;
+   background-color: black;
+
+   color: #999;
+   font-size: 12px;
+   line-height: 60px;
+   padding: 0 25px;
+
+   /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+
+   display: flex;
+   justify-content: space-between;
+}

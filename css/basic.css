@@ -1,0 +1,127 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* header */
+.container {
+   background-color: rgb(224, 165, 89);
+   height: 400px;
+}
+
+.items {
+   height: 30px;
+   background-color: cadetblue;
+   font-weight: bold;
+   font-size: 15px;
+   margin-bottom: 15px;
+}
+
+.items:hover {
+   background-color: rgb(176, 214, 118);
+}
+
+/* content */
+.content {
+   height: 300px;
+   background-color: rgb(210, 157, 138);
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.inner {
+   height: 100px;
+   width: 30%;
+   background-color: bisque;
+   margin-right: 10px;
+
+   text-align: center;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.inner:first-child {
+   line-height: 100px;
+   font-size: 10px;
+}
+
+.inner:nth-child(2) {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.inner:last-child {
+   display: table;
+}
+
+.inner:last-child > .line {
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   /* color: magenta; */
+}
+
+/* 버튼 스타일 */
+.w-btn {
+   position: relative;
+   border: none;
+   display: inline-block;
+   padding: 15px 30px;
+   border-radius: 15px;
+   font-family: "paybooc-Light", sans-serif;
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+   text-decoration: none;
+   font-weight: 600;
+   transition: 0.25s;
+}
+
+.w-btn-gra3 {
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   color: white;
+}
+
+.w-btn-gra-anim {
+   background-size: 400% 400%;
+   animation: gradient1 5s ease infinite;
+}
+
+@keyframes gradient1 {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+@keyframes gradient2 {
+   0% {
+      background-position: 100% 50%;
+   }
+   50% {
+      background-position: 0% 50%;
+   }
+   100% {
+      background-position: 100% 50%;
+   }
+}
+
+@keyframes ring {
+   0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+   }
+   100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+   }
+}
